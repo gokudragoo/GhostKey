@@ -1,0 +1,86 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: ◒
+      - generic [ref=e8]: ghostkey
+    - generic [ref=e9]: Built for 0G Galileo
+    - button "Connect wallet" [ref=e11] [cursor=pointer]
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - paragraph [ref=e14]: PROGRAMMABLE AGENT PERMISSIONS
+      - heading [level=1] [ref=e15]:
+        - text: Give agents access.
+        - emphasis [ref=e16]: Keep control.
+      - paragraph [ref=e17]: GhostKey puts deterministic limits between autonomous agents and your wallet. Approve what they can do, cap what they can spend, and revoke access in one click.
+      - generic [ref=e18]:
+        - button "Launch GhostKey" [ref=e19] [cursor=pointer]
+        - link "Why 0G" [ref=e23] [cursor=pointer]:
+          - /url: https://build.0g.ai/chain
+      - generic [ref=e27]:
+        - generic [ref=e28]: Policy enforced onchain
+        - generic [ref=e32]: 0G finality
+        - generic [ref=e35]: Non-custodial
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e47]: ghostkey / policy-check
+          - generic [ref=e48]: LIVE
+        - generic [ref=e50]:
+          - generic [ref=e51]: "agent.request({"
+          - generic [ref=e52]: "action: \"TRANSFER\","
+          - generic [ref=e53]:
+            - text: "amount:"
+            - generic [ref=e54]: "\"500 USDC\""
+            - text: ","
+          - generic [ref=e55]: "recipient: \"0x92…BAD\""
+          - generic [ref=e56]: "})"
+          - generic [ref=e58]:
+            - generic [ref=e63]:
+              - strong [ref=e64]: BLOCKED
+              - generic [ref=e65]: Transfer permission disabled
+            - generic [ref=e66]: GK-004
+          - generic [ref=e67]: "No funds moved · policy #8291"
+      - generic [ref=e68]: AI is the actor.Rules stay yours.
+  - generic [ref=e70]:
+    - generic [ref=e71]: Security for the agentic economy
+    - generic [ref=e72]: 0G Chain · Agentic ID · Compute · Storage
+    - generic [ref=e73]: Open, inspectable, revocable
+  - generic [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - paragraph [ref=e77]: A CONTROL PLANE FOR AGENTS
+        - heading [level=2] [ref=e78]:
+          - text: Clear permissions.
+          - emphasis [ref=e79]: Quiet confidence.
+      - paragraph [ref=e80]: GhostKey keeps the owner in the loop without slowing the agent down. Define the boundary once, inspect every request, and close access when the job is done.
+    - generic [ref=e81]:
+      - article [ref=e82]:
+        - generic [ref=e83]: 01 / DEFINE
+        - heading "Give an agent a narrow lane." [level=3] [ref=e84]
+        - paragraph [ref=e85]: Choose the target, action, function selector, spend cap, transaction count, and expiry.
+        - generic [ref=e88]: Scope before speed
+      - article [ref=e89]:
+        - generic [ref=e90]: 02 / CHECK
+        - heading "Make every request legible." [level=3] [ref=e91]
+        - paragraph [ref=e92]: The console shows what would pass or fail before a target transaction is ever submitted.
+        - generic [ref=e93]:
+          - generic [ref=e94]: agent
+          - generic [ref=e95]: ✓
+        - generic [ref=e96]:
+          - generic [ref=e97]: selector
+          - generic [ref=e98]: ✓
+        - generic [ref=e99]:
+          - generic [ref=e100]: spend cap
+          - generic [ref=e101]: ✓
+      - article [ref=e102]:
+        - generic [ref=e103]: 03 / REVOKE
+        - heading "End access on your terms." [level=3] [ref=e104]
+        - paragraph [ref=e105]: Revoke an active policy from the Permissions view, or let its onchain expiry close the window.
+        - generic [ref=e106]: Owner-controlled
+        - generic [ref=e108]: No silent renewal
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - text: BUILT FOR 0G GALILEO
+        - strong [ref=e111]: One wallet. One policy surface. No custody.
+      - link "Read the network docs" [ref=e112] [cursor=pointer]:
+        - /url: https://build.0g.ai/chain
