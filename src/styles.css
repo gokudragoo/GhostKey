@@ -524,16 +524,82 @@ a {
   display: grid;
   grid-template-columns: 236px 1fr;
   background: #f6f7f9;
+  transition: grid-template-columns 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.app-shell.sidebar-collapsed {
+  grid-template-columns: 82px 1fr;
 }
 .sidebar {
+  min-width: 0;
+  position: relative;
   border-right: 1px solid var(--line);
   background: #fbfcfd;
   padding: 27px 17px 20px;
   display: flex;
   flex-direction: column;
+  transition: padding 0.55s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .sidebar .brand {
   padding: 0 11px;
+  min-height: 31px;
+}
+.sidebar-toggle {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: #7c8994;
+  transition:
+    transform 0.5s cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 0.5s cubic-bezier(0.32, 0.72, 0, 1),
+    color 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.sidebar-toggle:hover {
+  transform: scale(1.06);
+  border-color: #aeb8c1;
+  color: var(--ink);
+}
+.sidebar.collapsed {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.sidebar.collapsed .brand {
+  justify-content: center;
+  padding: 0;
+}
+.sidebar.collapsed .brand-word,
+.sidebar.collapsed .network-pill .network-id,
+.sidebar.collapsed .nav-label,
+.sidebar.collapsed .sidebar-label {
+  display: none;
+}
+.sidebar.collapsed .sidebar-toggle {
+  margin-left: 0;
+}
+.sidebar.collapsed .network-pill {
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+.sidebar.collapsed .sidebar-bottom {
+  padding-left: 0;
+  padding-right: 0;
+}
+.sidebar.collapsed .wallet-link,
+.sidebar.collapsed .disconnect {
+  justify-content: center;
 }
 .network-pill {
   margin: 34px 8px 26px;
