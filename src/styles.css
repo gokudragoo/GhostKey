@@ -107,9 +107,9 @@ a {
   font-size: 13px;
   font-weight: 700;
   transition:
-    transform 0.18s ease,
-    background 0.18s ease,
-    border-color 0.18s ease;
+    transform 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+    background 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 0.45s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .button:active {
   transform: translateY(1px) scale(0.99);
@@ -125,6 +125,12 @@ a {
 }
 .button.primary:hover {
   background: #1d49c8;
+}
+.button.primary svg {
+  transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.button.primary:hover svg {
+  transform: translate(3px, -2px);
 }
 .button.outline {
   background: #fff;
@@ -153,6 +159,13 @@ a {
   align-items: center;
   flex: 1;
   padding: 64px 0 96px;
+}
+.hero-copy,
+.hero-visual {
+  animation: landing-rise 0.85s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+.hero-visual {
+  animation-delay: 0.1s;
 }
 .eyebrow {
   margin: 0 0 14px;
@@ -220,7 +233,12 @@ a {
   background: #17212b;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(23, 33, 43, 0.16);
+  box-shadow: 0 20px 48px rgba(23, 33, 43, 0.12);
+  transform: translateZ(0);
+  transition: transform 0.65s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.terminal-card:hover {
+  transform: translateY(-6px);
 }
 .terminal-head {
   height: 48px;
@@ -353,6 +371,153 @@ a {
     10px "IBM Plex Mono",
     monospace;
   letter-spacing: 0.05em;
+}
+.landing-details {
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 116px 0 96px;
+}
+.details-heading {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.details-heading h2 {
+  margin: 0;
+  font-size: clamp(38px, 4.2vw, 62px);
+  line-height: 1;
+  letter-spacing: -0.07em;
+  font-weight: 600;
+}
+.details-heading h2 em {
+  color: var(--blue);
+  font-style: normal;
+}
+.details-heading > p {
+  max-width: 430px;
+  margin: 0 0 4px auto;
+  color: #61707d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.workflow-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr 0.9fr;
+  gap: 14px;
+}
+.workflow-card {
+  min-height: 280px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition:
+    transform 0.55s cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.workflow-card:hover {
+  transform: translateY(-5px);
+  border-color: #b4c0ca;
+}
+.workflow-card-featured {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.workflow-index {
+  color: #82919c;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.14em;
+}
+.workflow-card-featured .workflow-index {
+  color: #96a8b5;
+}
+.workflow-card h3 {
+  max-width: 260px;
+  margin: 42px 0 12px;
+  font-size: 23px;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+.workflow-card p {
+  max-width: 280px;
+  margin: 0;
+  color: #71808e;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.workflow-card-featured p {
+  color: #aab7c1;
+}
+.workflow-meter {
+  height: 5px;
+  margin-top: auto;
+  background: #364550;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.workflow-meter span {
+  display: block;
+  height: 100%;
+  background: #6ba5ff;
+  border-radius: inherit;
+}
+.workflow-foot {
+  margin-top: 14px;
+  color: #8e9ba5;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+}
+.workflow-rule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: #71808e;
+  font:
+    11px "IBM Plex Mono",
+    monospace;
+}
+.workflow-rule b {
+  color: var(--success);
+  font-size: 13px;
+}
+.workflow-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+.workflow-status .status-dot {
+  box-shadow: none;
+}
+.landing-callout {
+  margin-top: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.landing-callout strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  letter-spacing: -0.02em;
 }
 .app-shell {
   min-height: 100dvh;
