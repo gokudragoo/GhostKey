@@ -9,6 +9,8 @@ import {
   LockKey,
   Plus,
   ShieldCheck,
+  SidebarCollapse,
+  SidebarExpand,
   SignOut,
   TerminalWindow,
   Trash,
@@ -83,6 +85,7 @@ export default function App() {
     [address, setAddress] = useState(""),
     [policies, setPolicies] = useState<PolicyRecord[]>([]),
     [activity, setActivity] = useState<Activity[]>([]);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [draft, setDraft] = useState<Draft>(emptyDraft),
     [showCreate, setShowCreate] = useState(false),
     [step, setStep] = useState(1),
@@ -469,13 +472,21 @@ export default function App() {
   const budget = active.reduce((s, p) => s + Number(p.totalLimit), 0),
     spent = active.reduce((s, p) => s + Number(p.spent), 0);
   return (
-    <div className="app-shell">
-      <aside className="sidebar">
+    <div className={sidebarOpen ? "app-shell" : "app-shell sidebar-collapsed"}>
+      <aside className={sidebarOpen ? "sidebar" : "sidebar collapsed"}>
         <div className="brand">
           <span className="brand-mark">
             <GhostMark />
           </span>
-          <span>ghostkey</span>
+          <span className="brand-word">ghostkey</span>
+          <button
+            className="sidebar-toggle"
+            onClick={() => setSidebarOpen((open) => !open)}
+            aria-label={sidebarOpen ? "Collapse sidebar" : "Expand sidebar"}
+            title={sidebarOpen ? "Collapse sidebar" : "Expand sidebar"}
+          >
+            {sidebarOpen ? <SidebarCollapse size={17} /> : <SidebarExpand size={17} />}
+          </button>
         </div>
         <div className="network-pill">
           <span className="status-dot" />
@@ -496,7 +507,7 @@ export default function App() {
               onClick={() => setView(key)}
             >
               <Icon size={18} weight="duotone" />
-              {label}
+              <span className="nav-label">{label}</span>
             </button>
           ))}
         </nav>
@@ -507,11 +518,12 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            {shortAddress(address)} <ArrowUpRight size={14} />
+            <span className="sidebar-label">{shortAddress(address)}</span>{" "}
+            <ArrowUpRight size={14} />
           </a>
           <button className="disconnect" onClick={() => setAddress("")}>
             <SignOut size={16} />
-            Disconnect
+            <span className="sidebar-label">Disconnect</span>
           </button>
         </div>
       </aside>
@@ -692,8 +704,8 @@ function Landing({ connect, busy }: { connect: () => void; busy: boolean }) {
         </div>
         <div className="hero-visual">
           <div className="terminal-card">
-            <div className="terminal-head\">
-              <span className="terminal-dots\">
+            <div className="terminal-head">
+              <span className="terminal-dots">
                 <i />
                 <i />
                 <i />
@@ -708,19 +720,19 @@ function Landing({ connect, busy }: { connect: () => void; busy: boolean }) {
               <div className="terminal-line dim">agent.request({"{"}</div>
               <div className="terminal-line indent">
                 <span className="key">action</span>:{" "}
-                <span className="value">\"TRANSFER\"</span>,
+                <span className="value">"TRANSFER"</span>,
               </div>
               <div className="terminal-line indent">
                 <span className="key">amount</span>:{" "}
-                <span className="value">\"500 {ASSET_SYMBOL}\"</span>,
+                <span className="value">"500 {ASSET_SYMBOL}"</span>,
               </div>
               <div className="terminal-line indent">
                 <span className="key">recipient</span>:{" "}
-                <span className="value">\"0x92…BAD\"</span>
+                <span className="value">"0x92…BAD"</span>
               </div>
               <div className="terminal-line dim">{"}"})</div>
               <div className="terminal-rule" />
-              <div className="decision blocked\">
+              <div className="decision blocked">
                 <Warning size={18} weight="fill" />
                 <div>
                   <strong>BLOCKED</strong>
@@ -975,7 +987,7 @@ function Policies({
           {policies.map((p) => (
             <div key={p.id} className="policy-list-item">
               <PolicyCard policy={p} onRevoke={busy ? undefined : onRevoke} />
-              <div className="policy-detail\">
+              <div className="policy-detail">
                 <div>
                   <span className="detail-label">Allowed action</span>
                   <strong>
