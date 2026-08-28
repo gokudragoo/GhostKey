@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520" role="img" aria-labelledby="ghostkey-lifecycle-title ghostkey-lifecycle-desc">
+  <title id="ghostkey-lifecycle-title">GhostKey policy lifecycle</title>
+  <desc id="ghostkey-lifecycle-desc">State diagram showing a policy moving from draft through wallet review to active enforcement and then becoming inactive by revocation or expiry.</desc>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');</style>
+    <marker id="ghostkey-lifecycle-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#71808e"/></marker>
+    <marker id="ghostkey-lifecycle-blue-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2559e8"/></marker>
+  </defs>
+  <rect width="1120" height="520" fill="#f6f7f9"/>
+  <text x="40" y="48" fill="#71808e" font-size="12" font-family="'IBM Plex Mono', monospace" letter-spacing="0.16em">GHOSTKEY / POLICY LIFECYCLE</text>
+  <text x="40" y="84" fill="#17212b" font-size="28" font-family="'DM Sans', sans-serif" font-weight="600">Owner-controlled from draft to inactive</text>
+  <text x="40" y="112" fill="#71808e" font-size="12" font-family="'DM Sans', sans-serif">Every transition is explicit, wallet-authorized, and visible to the owner.</text>
+
+  <path d="M240 252 H300" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-lifecycle-arrow)"/>
+  <rect x="244" y="224" width="52" height="16" rx="2" fill="#f6f7f9"/><text x="270" y="236" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">REVIEW</text>
+  <path d="M460 252 H520" fill="none" stroke="#2559e8" stroke-width="1.2" marker-end="url(#ghostkey-lifecycle-blue-arrow)"/>
+  <rect x="464" y="224" width="52" height="16" rx="2" fill="#f6f7f9"/><text x="490" y="236" text-anchor="middle" fill="#2559e8" font-size="8" font-family="'IBM Plex Mono', monospace">SIGN</text>
+  <path d="M680 252 H740" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-lifecycle-arrow)"/>
+  <rect x="676" y="224" width="68" height="16" rx="2" fill="#f6f7f9"/><text x="710" y="236" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">REVOKE</text>
+  <path d="M628 312 V376 H850 V312" fill="none" stroke="#71808e" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#ghostkey-lifecycle-arrow)"/>
+  <rect x="736" y="356" width="64" height="16" rx="2" fill="#f6f7f9"/><text x="768" y="368" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">EXPIRY</text>
+
+  <rect x="80" y="204" width="160" height="96" rx="8" fill="#ffffff" stroke="#17212b"/>
+  <rect x="96" y="216" width="44" height="16" rx="2" fill="none" stroke="#71808e"/><text x="118" y="228" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">STATE</text>
+  <text x="160" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Draft</text>
+  <text x="160" y="280" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">form fields + prompt</text>
+
+  <rect x="300" y="204" width="160" height="96" rx="8" fill="#ffffff" stroke="#17212b"/>
+  <rect x="316" y="216" width="44" height="16" rx="2" fill="none" stroke="#71808e"/><text x="338" y="228" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">STATE</text>
+  <text x="380" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Review</text>
+  <text x="380" y="280" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">validation + selector</text>
+
+  <rect x="520" y="204" width="160" height="96" rx="8" fill="#edf2ff" stroke="#2559e8" stroke-width="1.2"/>
+  <rect x="536" y="216" width="44" height="16" rx="2" fill="none" stroke="#2559e8"/><text x="558" y="228" text-anchor="middle" fill="#2559e8" font-size="8" font-family="'IBM Plex Mono', monospace">STATE</text>
+  <text x="600" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Active</text>
+  <text x="600" y="280" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">onchain policy checks</text>
+
+  <rect x="740" y="204" width="220" height="96" rx="8" fill="#ffffff" stroke="#17212b"/>
+  <rect x="756" y="216" width="44" height="16" rx="2" fill="none" stroke="#71808e"/><text x="778" y="228" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">STATE</text>
+  <text x="850" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Inactive</text>
+  <text x="850" y="280" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">revoked or expired</text>
+
+  <rect x="80" y="368" width="440" height="64" rx="6" fill="#17212b" fill-opacity="0.025" stroke="#71808e" stroke-opacity="0.28"/>
+  <text x="104" y="394" fill="#17212b" font-size="13" font-family="'DM Sans', sans-serif" font-weight="600">Owner checkpoint</text>
+  <text x="104" y="414" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">Review all limits before confirming the wallet transaction.</text>
+  <rect x="600" y="368" width="360" height="64" rx="6" fill="#17212b" fill-opacity="0.025" stroke="#71808e" stroke-opacity="0.28"/>
+  <text x="624" y="394" fill="#17212b" font-size="13" font-family="'DM Sans', sans-serif" font-weight="600">No silent renewal</text>
+  <text x="624" y="414" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">Expiry is stored onchain and cannot be bypassed by the UI.</text>
+
+  <line x1="40" y1="468" x2="1080" y2="468" stroke="#71808e" stroke-opacity="0.28"/>
+  <text x="40" y="492" fill="#71808e" font-size="9" font-family="'IBM Plex Mono', monospace">Solid arrows = explicit owner action · dashed arrow = automatic expiry boundary</text>
+</svg>

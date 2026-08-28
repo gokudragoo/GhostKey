@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="ghostkey-architecture-title ghostkey-architecture-desc">
+  <title id="ghostkey-architecture-title">GhostKey runtime architecture</title>
+  <desc id="ghostkey-architecture-desc">Architecture showing the wallet and GhostKey browser app connecting to the 0G Compute API, Galileo RPC, and the deployed policy manager contract.</desc>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');</style>
+    <marker id="ghostkey-architecture-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#71808e"/></marker>
+    <marker id="ghostkey-architecture-blue-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2559e8"/></marker>
+  </defs>
+  <rect width="1200" height="640" fill="#f6f7f9"/>
+  <text x="40" y="48" fill="#71808e" font-size="12" font-family="'IBM Plex Mono', monospace" letter-spacing="0.16em">GHOSTKEY / ARCHITECTURE</text>
+  <text x="40" y="84" fill="#17212b" font-size="28" font-family="'DM Sans', sans-serif" font-weight="600">A bounded path from wallet to policy enforcement</text>
+  <rect x="40" y="116" width="456" height="376" rx="8" fill="#17212b" fill-opacity="0.025" stroke="#71808e" stroke-opacity="0.28"/>
+  <rect x="520" y="116" width="268" height="376" rx="8" fill="#17212b" fill-opacity="0.025" stroke="#71808e" stroke-opacity="0.28"/>
+  <rect x="812" y="116" width="348" height="376" rx="8" fill="#17212b" fill-opacity="0.025" stroke="#71808e" stroke-opacity="0.28"/>
+  <rect x="56" y="120" width="100" height="16" rx="2" fill="#f6f7f9"/><text x="106" y="132" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace" letter-spacing="0.14em">CLIENT</text>
+  <rect x="536" y="120" width="104" height="16" rx="2" fill="#f6f7f9"/><text x="588" y="132" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace" letter-spacing="0.14em">SERVICES</text>
+  <rect x="828" y="120" width="92" height="16" rx="2" fill="#f6f7f9"/><text x="874" y="132" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace" letter-spacing="0.14em">0G CHAIN</text>
+
+  <path d="M240 224 H300" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-architecture-arrow)"/>
+  <rect x="244" y="196" width="52" height="16" rx="2" fill="#f6f7f9"/><text x="270" y="208" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">SIGN</text>
+  <path d="M500 224 H600" fill="none" stroke="#2559e8" stroke-width="1.2" marker-end="url(#ghostkey-architecture-blue-arrow)"/>
+  <rect x="518" y="196" width="64" height="16" rx="2" fill="#f6f7f9"/><text x="550" y="208" text-anchor="middle" fill="#2559e8" font-size="8" font-family="'IBM Plex Mono', monospace">PROMPT</text>
+  <path d="M500 256 H760 Q768 256 768 264 V304 Q768 312 776 312 H844" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-architecture-arrow)"/>
+  <rect x="676" y="272" width="48" height="16" rx="2" fill="#f6f7f9"/><text x="700" y="284" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">READ</text>
+  <path d="M400 268 V344" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-architecture-arrow)"/>
+  <rect x="408" y="294" width="56" height="16" rx="2" fill="#f6f7f9"/><text x="436" y="306" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">LOG</text>
+  <path d="M1004 268 V344" fill="none" stroke="#2559e8" stroke-width="1.2" marker-end="url(#ghostkey-architecture-blue-arrow)"/>
+  <rect x="1012" y="294" width="56" height="16" rx="2" fill="#f6f7f9"/><text x="1040" y="306" text-anchor="middle" fill="#2559e8" font-size="8" font-family="'IBM Plex Mono', monospace">ENFORCE</text>
+
+  <rect x="72" y="176" width="168" height="96" rx="6" fill="#ffffff" stroke="#17212b"/>
+  <rect x="88" y="188" width="40" height="16" rx="2" fill="none" stroke="#71808e"/><text x="108" y="200" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">USER</text>
+  <text x="156" y="232" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Wallet</text>
+  <text x="156" y="252" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">injected EVM signer</text>
+
+  <rect x="300" y="176" width="200" height="96" rx="6" fill="#edf2ff" stroke="#2559e8" stroke-width="1.2"/>
+  <rect x="316" y="188" width="40" height="16" rx="2" fill="none" stroke="#2559e8"/><text x="336" y="200" text-anchor="middle" fill="#2559e8" font-size="8" font-family="'IBM Plex Mono', monospace">APP</text>
+  <text x="400" y="232" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">GhostKey UI</text>
+  <text x="400" y="252" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">validate · review · simulate</text>
+
+  <rect x="300" y="344" width="200" height="96" rx="6" fill="#ffffff" stroke="#17212b"/>
+  <rect x="316" y="356" width="48" height="16" rx="2" fill="none" stroke="#71808e"/><text x="340" y="368" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">STATE</text>
+  <text x="400" y="400" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Session activity</text>
+  <text x="400" y="420" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">localStorage · CSV export</text>
+
+  <rect x="600" y="176" width="168" height="96" rx="6" fill="#ffffff" stroke="#17212b"/>
+  <rect x="616" y="188" width="40" height="16" rx="2" fill="none" stroke="#71808e"/><text x="636" y="200" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">API</text>
+  <text x="684" y="232" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">0G Compute</text>
+  <text x="684" y="252" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">signed prompt → JSON</text>
+
+  <rect x="844" y="176" width="168" height="96" rx="6" fill="#ffffff" stroke="#17212b"/>
+  <rect x="860" y="188" width="40" height="16" rx="2" fill="none" stroke="#71808e"/><text x="880" y="200" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">RPC</text>
+  <text x="928" y="232" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Galileo RPC</text>
+  <text x="928" y="252" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">chain 16602</text>
+
+  <rect x="844" y="344" width="224" height="96" rx="6" fill="#edf2ff" stroke="#2559e8" stroke-width="1.2"/>
+  <rect x="860" y="356" width="64" height="16" rx="2" fill="none" stroke="#2559e8"/><text x="892" y="368" text-anchor="middle" fill="#2559e8" font-size="8" font-family="'IBM Plex Mono', monospace">CONTRACT</text>
+  <text x="956" y="400" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">GhostKeyManager</text>
+  <text x="956" y="420" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">policy storage + checks</text>
+
+  <line x1="40" y1="540" x2="1160" y2="540" stroke="#71808e" stroke-opacity="0.28"/>
+  <text x="40" y="568" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace" letter-spacing="0.14em">LEGEND</text>
+  <line x1="112" y1="564" x2="152" y2="564" stroke="#2559e8" stroke-width="1.2" marker-end="url(#ghostkey-architecture-blue-arrow)"/><text x="164" y="568" fill="#71808e" font-size="10" font-family="'DM Sans', sans-serif">primary request / enforcement</text>
+  <line x1="360" y1="564" x2="400" y2="564" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-architecture-arrow)"/><text x="412" y="568" fill="#71808e" font-size="10" font-family="'DM Sans', sans-serif">read, sign, or local state</text>
+  <text x="40" y="608" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">Static diagram · no private keys leave the wallet</text>
+</svg>

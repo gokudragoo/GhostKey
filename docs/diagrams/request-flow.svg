@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="ghostkey-request-title ghostkey-request-desc">
+  <title id="ghostkey-request-title">GhostKey policy request flow</title>
+  <desc id="ghostkey-request-desc">Flowchart showing a request being validated against an active policy and ending in an allowed or blocked session result.</desc>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');</style>
+    <marker id="ghostkey-request-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#71808e"/></marker>
+    <marker id="ghostkey-request-blue-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2559e8"/></marker>
+  </defs>
+  <rect width="960" height="720" fill="#f6f7f9"/>
+  <text x="40" y="48" fill="#71808e" font-size="12" font-family="'IBM Plex Mono', monospace" letter-spacing="0.16em">GHOSTKEY / REQUEST CHECK</text>
+  <text x="40" y="84" fill="#17212b" font-size="28" font-family="'DM Sans', sans-serif" font-weight="600">Every request meets the same deterministic gates</text>
+
+  <path d="M480 168 V220" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-request-arrow)"/>
+  <rect x="496" y="184" width="60" height="16" rx="2" fill="#f6f7f9"/><text x="526" y="196" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">SUBMIT</text>
+  <path d="M480 300 V320" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-request-arrow)"/>
+  <rect x="496" y="300" width="64" height="16" rx="2" fill="#f6f7f9"/><text x="528" y="312" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">CHECK</text>
+  <path d="M480 400 V452" fill="none" stroke="#2559e8" stroke-width="1.2" marker-end="url(#ghostkey-request-blue-arrow)"/>
+  <rect x="496" y="416" width="68" height="16" rx="2" fill="#f6f7f9"/><text x="530" y="428" text-anchor="middle" fill="#2559e8" font-size="8" font-family="'IBM Plex Mono', monospace">PASS</text>
+  <path d="M560 360 H720 V452" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-request-arrow)"/>
+  <rect x="624" y="336" width="56" height="16" rx="2" fill="#f6f7f9"/><text x="652" y="348" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">FAIL</text>
+  <path d="M480 532 V592" fill="none" stroke="#2559e8" stroke-width="1.2" marker-end="url(#ghostkey-request-blue-arrow)"/>
+  <path d="M720 532 V560 H560 V592" fill="none" stroke="#71808e" stroke-width="1.2" marker-end="url(#ghostkey-request-arrow)"/>
+  <rect x="612" y="540" width="56" height="16" rx="2" fill="#f6f7f9"/><text x="640" y="552" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">LOG</text>
+
+  <ellipse cx="480" cy="136" rx="112" ry="32" fill="#ffffff" stroke="#17212b"/>
+  <text x="480" y="132" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Agent request</text>
+  <text x="480" y="150" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">action · amount · calldata</text>
+
+  <rect x="360" y="220" width="240" height="80" rx="6" fill="#ffffff" stroke="#17212b"/>
+  <rect x="376" y="232" width="64" height="16" rx="2" fill="none" stroke="#71808e"/><text x="408" y="244" text-anchor="middle" fill="#71808e" font-size="8" font-family="'IBM Plex Mono', monospace">INPUT</text>
+  <text x="480" y="268" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Normalize request</text>
+  <text x="480" y="284" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">selector + positive amount</text>
+
+  <polygon points="480,320 560,360 480,400 400,360" fill="#edf2ff" stroke="#2559e8" stroke-width="1.2"/>
+  <text x="480" y="356" text-anchor="middle" fill="#17212b" font-size="15" font-family="'DM Sans', sans-serif" font-weight="600">Policy allows?</text>
+  <text x="480" y="372" text-anchor="middle" fill="#71808e" font-size="9" font-family="'IBM Plex Mono', monospace">agent · action · cap · expiry</text>
+
+  <rect x="376" y="452" width="208" height="80" rx="6" fill="#edf2ff" stroke="#2559e8" stroke-width="1.2"/>
+  <text x="480" y="486" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Allowed</text>
+  <text x="480" y="506" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">simulation recorded</text>
+
+  <rect x="616" y="452" width="208" height="80" rx="6" fill="#ffffff" stroke="#17212b"/>
+  <text x="720" y="486" text-anchor="middle" fill="#17212b" font-size="16" font-family="'DM Sans', sans-serif" font-weight="600">Blocked</text>
+  <text x="720" y="506" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">no funds moved</text>
+
+  <rect x="376" y="592" width="208" height="64" rx="6" fill="#ffffff" stroke="#17212b"/>
+  <text x="480" y="620" text-anchor="middle" fill="#17212b" font-size="15" font-family="'DM Sans', sans-serif" font-weight="600">Session activity</text>
+  <text x="480" y="638" text-anchor="middle" fill="#71808e" font-size="10" font-family="'IBM Plex Mono', monospace">visible in Activity + CSV</text>
+
+  <line x1="40" y1="680" x2="920" y2="680" stroke="#71808e" stroke-opacity="0.28"/>
+  <text x="40" y="704" fill="#71808e" font-size="9" font-family="'IBM Plex Mono', monospace">Blue = primary allowed path · gray = validation or blocked path</text>
+</svg>
