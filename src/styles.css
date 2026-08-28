@@ -130,8 +130,23 @@ a {
 .button.primary svg {
   transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
 }
+.button-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  transition:
+    transform 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+    background 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+}
 .button.primary:hover svg {
   transform: translate(3px, -2px);
+}
+.button.primary:hover .button-icon {
+  transform: translate(2px, -1px) scale(1.06);
+  background: rgba(255, 255, 255, 0.2);
 }
 .button.outline {
   background: #fff;

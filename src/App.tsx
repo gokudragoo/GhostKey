@@ -679,8 +679,10 @@ function Landing({ connect, busy }: { connect: () => void; busy: boolean }) {
               onClick={connect}
               disabled={busy}
             >
-              {busy ? "Connecting…" : "Launch GhostKey"}{" "}
-              <ArrowUpRight size={17} />
+              {busy ? "Connecting…" : "Launch GhostKey"}
+              <span className="button-icon" aria-hidden="true">
+                <ArrowUpRight size={15} />
+              </span>
             </button>
             <a
               className="text-link"
