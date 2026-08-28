@@ -1,0 +1,86 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]: ◒
+      - generic [ref=f1e8]: ghostkey
+    - generic [ref=f1e9]: Built for 0G Galileo
+    - button "Connect wallet" [ref=f1e11] [cursor=pointer]
+  - generic [ref=f1e12]:
+    - generic [ref=f1e13]:
+      - paragraph [ref=f1e14]: PROGRAMMABLE AGENT PERMISSIONS
+      - heading [level=1] [ref=f1e15]:
+        - text: Give agents access.
+        - emphasis [ref=f1e16]: Keep control.
+      - paragraph [ref=f1e17]: GhostKey puts deterministic limits between autonomous agents and your wallet. Approve what they can do, cap what they can spend, and revoke access in one click.
+      - generic [ref=f1e18]:
+        - button "Launch GhostKey" [ref=f1e19] [cursor=pointer]
+        - link "Why 0G" [ref=f1e23] [cursor=pointer]:
+          - /url: https://build.0g.ai/chain
+      - generic [ref=f1e27]:
+        - generic [ref=f1e28]: Policy enforced onchain
+        - generic [ref=f1e32]: 0G finality
+        - generic [ref=f1e35]: Non-custodial
+    - generic [ref=f1e40]:
+      - generic [ref=f1e41]:
+        - generic [ref=f1e42]:
+          - generic [ref=f1e47]: ghostkey / policy-check
+          - generic [ref=f1e48]: LIVE
+        - generic [ref=f1e50]:
+          - generic [ref=f1e51]: "agent.request({"
+          - generic [ref=f1e52]: "action: \"TRANSFER\","
+          - generic [ref=f1e53]:
+            - text: "amount:"
+            - generic [ref=f1e54]: "\"500 USDC\""
+            - text: ","
+          - generic [ref=f1e55]: "recipient: \"0x92…BAD\""
+          - generic [ref=f1e56]: "})"
+          - generic [ref=f1e58]:
+            - generic [ref=f1e63]:
+              - strong [ref=f1e64]: BLOCKED
+              - generic [ref=f1e65]: Transfer permission disabled
+            - generic [ref=f1e66]: GK-004
+          - generic [ref=f1e67]: "No funds moved · policy #8291"
+      - generic [ref=f1e68]: AI is the actor.Rules stay yours.
+  - generic [ref=f1e70]:
+    - generic [ref=f1e71]: Security for the agentic economy
+    - generic [ref=f1e72]: 0G Chain · Agentic ID · Compute · Storage
+    - generic [ref=f1e73]: Open, inspectable, revocable
+  - generic [ref=f1e74]:
+    - generic [ref=f1e75]:
+      - generic [ref=f1e76]:
+        - paragraph [ref=f1e77]: A CONTROL PLANE FOR AGENTS
+        - heading [level=2] [ref=f1e78]:
+          - text: Clear permissions.
+          - emphasis [ref=f1e79]: Quiet confidence.
+      - paragraph [ref=f1e80]: GhostKey keeps the owner in the loop without slowing the agent down. Define the boundary once, inspect every request, and close access when the job is done.
+    - generic [ref=f1e81]:
+      - article [ref=f1e82]:
+        - generic [ref=f1e83]: 01 / DEFINE
+        - heading "Give an agent a narrow lane." [level=3] [ref=f1e84]
+        - paragraph [ref=f1e85]: Choose the target, action, function selector, spend cap, transaction count, and expiry.
+        - generic [ref=f1e88]: Scope before speed
+      - article [ref=f1e89]:
+        - generic [ref=f1e90]: 02 / CHECK
+        - heading "Make every request legible." [level=3] [ref=f1e91]
+        - paragraph [ref=f1e92]: The console shows what would pass or fail before a target transaction is ever submitted.
+        - generic [ref=f1e93]:
+          - generic [ref=f1e94]: agent
+          - generic [ref=f1e95]: ✓
+        - generic [ref=f1e96]:
+          - generic [ref=f1e97]: selector
+          - generic [ref=f1e98]: ✓
+        - generic [ref=f1e99]:
+          - generic [ref=f1e100]: spend cap
+          - generic [ref=f1e101]: ✓
+      - article [ref=f1e102]:
+        - generic [ref=f1e103]: 03 / REVOKE
+        - heading "End access on your terms." [level=3] [ref=f1e104]
+        - paragraph [ref=f1e105]: Revoke an active policy from the Permissions view, or let its onchain expiry close the window.
+        - generic [ref=f1e106]: Owner-controlled
+        - generic [ref=f1e108]: No silent renewal
+    - generic [ref=f1e109]:
+      - generic [ref=f1e110]:
+        - text: BUILT FOR 0G GALILEO
+        - strong [ref=f1e111]: One wallet. One policy surface. No custody.
+      - link "Read the network docs" [ref=f1e112] [cursor=pointer]:
+        - /url: https://build.0g.ai/chain
