@@ -1,0 +1,47 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: ◒
+      - generic [ref=e8]: ghostkey
+    - generic [ref=e9]: Built for 0G Galileo
+    - button "Connect wallet" [ref=e11] [cursor=pointer]
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - paragraph [ref=e14]: PROGRAMMABLE AGENT PERMISSIONS
+      - heading [level=1] [ref=e15]:
+        - text: Give agents access.
+        - emphasis [ref=e16]: Keep control.
+      - paragraph [ref=e17]: GhostKey puts deterministic limits between autonomous agents and your wallet. Approve what they can do, cap what they can spend, and revoke access in one click.
+      - generic [ref=e18]:
+        - button "Launch GhostKey" [ref=e19] [cursor=pointer]
+        - link "Why 0G" [ref=e23] [cursor=pointer]:
+          - /url: https://build.0g.ai/chain
+      - generic [ref=e27]:
+        - generic [ref=e28]: Policy enforced onchain
+        - generic [ref=e32]: 0G finality
+        - generic [ref=e35]: Non-custodial
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - text: ghostkey / policy-check
+          - generic [ref=e43]: LIVE
+        - generic [ref=e45]:
+          - generic [ref=e46]: "agent.request({"
+          - generic [ref=e47]: "action: \\\"TRANSFER\\\","
+          - generic [ref=e48]:
+            - text: "amount:"
+            - generic [ref=e49]: \"500 USDC\"
+            - text: ","
+          - generic [ref=e50]: "recipient: \\\"0x92…BAD\\\""
+          - generic [ref=e51]: "})"
+          - generic [ref=e53]:
+            - generic [ref=e58]:
+              - strong [ref=e59]: BLOCKED
+              - generic [ref=e60]: Transfer permission disabled
+            - generic [ref=e61]: GK-004
+          - generic [ref=e62]: "No funds moved · policy #8291"
+      - generic [ref=e63]: AI is the actor.Rules stay yours.
+  - generic [ref=e65]:
+    - generic [ref=e66]: Security for the agentic economy
+    - generic [ref=e67]: 0G Chain · Agentic ID · Compute · Storage
+    - generic [ref=e68]: Open, inspectable, revocable
