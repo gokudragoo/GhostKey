@@ -1,0 +1,32 @@
+{
+  "name": "ghostkey",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write src api scripts contracts",
+    "format:check": "prettier --check src api scripts contracts",
+    "contract:compile": "node scripts/compile-contract.mjs",
+    "contract:deploy": "node scripts/deploy-contract.mjs",
+    "contract:verify": "node scripts/verify-deployment.mjs",
+    "check": "npm run format:check && npm run contract:compile && npm run build"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^3.46.0",
+    "ethers": "^6.15.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.2",
+    "prettier": "^3.9.6",
+    "solc": "^0.8.36",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}
