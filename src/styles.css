@@ -342,7 +342,7 @@ a {
 }
 .visual-note {
   position: absolute;
-  right: -40px;
+  right: 0;
   bottom: -48px;
   font-size: 12px;
   line-height: 1.45;
