@@ -758,6 +758,52 @@ function Landing({ connect, busy }: { connect: () => void; busy: boolean }) {
         <span>0G Chain · Agentic ID · Compute · Storage</span>
         <span>Open, inspectable, revocable</span>
       </section>
+      <section className="landing-details" id="how-it-works">
+        <div className="details-heading">
+          <div>
+            <p className="eyebrow">A CONTROL PLANE FOR AGENTS</p>
+            <h2>Clear permissions.<br /><em>Quiet confidence.</em></h2>
+          </div>
+          <p>
+            GhostKey keeps the owner in the loop without slowing the agent down.
+            Define the boundary once, inspect every request, and close access
+            when the job is done.
+          </p>
+        </div>
+        <div className="workflow-grid">
+          <article className="workflow-card workflow-card-featured">
+            <span className="workflow-index">01 / DEFINE</span>
+            <h3>Give an agent a narrow lane.</h3>
+            <p>Choose the target, action, function selector, spend cap, transaction count, and expiry.</p>
+            <div className="workflow-meter"><span style={{ width: "42%" }} /></div>
+            <span className="workflow-foot">Scope before speed</span>
+          </article>
+          <article className="workflow-card">
+            <span className="workflow-index">02 / CHECK</span>
+            <h3>Make every request legible.</h3>
+            <p>The console shows what would pass or fail before a target transaction is ever submitted.</p>
+            <div className="workflow-rule"><span>agent</span><b>✓</b></div>
+            <div className="workflow-rule"><span>selector</span><b>✓</b></div>
+            <div className="workflow-rule"><span>spend cap</span><b>✓</b></div>
+          </article>
+          <article className="workflow-card">
+            <span className="workflow-index">03 / REVOKE</span>
+            <h3>End access on your terms.</h3>
+            <p>Revoke an active policy from the Permissions view, or let its onchain expiry close the window.</p>
+            <div className="workflow-status"><span className="status-dot" /> Owner-controlled</div>
+            <span className="workflow-foot">No silent renewal</span>
+          </article>
+        </div>
+        <div className="landing-callout">
+          <div>
+            <span className="workflow-index">BUILT FOR 0G GALILEO</span>
+            <strong>One wallet. One policy surface. No custody.</strong>
+          </div>
+          <a className="text-link" href="https://build.0g.ai/chain" target="_blank" rel="noreferrer">
+            Read the network docs <ArrowUpRight size={15} />
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
