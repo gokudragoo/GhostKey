@@ -1,0 +1,46 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]: ◒
+      - generic [ref=f1e8]: ghostkey
+    - button "Connect wallet" [ref=f1e9] [cursor=pointer]
+  - generic [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - paragraph [ref=f1e12]: PROGRAMMABLE AGENT PERMISSIONS
+      - heading [level=1] [ref=f1e13]:
+        - text: Give agents access.
+        - emphasis [ref=f1e14]: Keep control.
+      - paragraph [ref=f1e15]: GhostKey puts deterministic limits between autonomous agents and your wallet. Approve what they can do, cap what they can spend, and revoke access in one click.
+      - generic [ref=f1e16]:
+        - button "Launch GhostKey" [ref=f1e17] [cursor=pointer]
+        - link "Why 0G" [ref=f1e21] [cursor=pointer]:
+          - /url: https://build.0g.ai/chain
+      - generic [ref=f1e25]:
+        - generic [ref=f1e26]: Policy enforced onchain
+        - generic [ref=f1e30]: 0G finality
+        - generic [ref=f1e33]: Non-custodial
+    - generic [ref=f1e38]:
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40]:
+          - text: ghostkey / policy-check
+          - generic [ref=f1e41]: LIVE
+        - generic [ref=f1e43]:
+          - generic [ref=f1e44]: "agent.request({"
+          - generic [ref=f1e45]: "action: \\\"TRANSFER\\\","
+          - generic [ref=f1e46]:
+            - text: "amount:"
+            - generic [ref=f1e47]: \"500 USDC\"
+            - text: ","
+          - generic [ref=f1e48]: "recipient: \\\"0x92…BAD\\\""
+          - generic [ref=f1e49]: "})"
+          - generic [ref=f1e51]:
+            - generic [ref=f1e56]:
+              - strong [ref=f1e57]: BLOCKED
+              - generic [ref=f1e58]: Transfer permission disabled
+            - generic [ref=f1e59]: GK-004
+          - generic [ref=f1e60]: "No funds moved · policy #8291"
+      - generic [ref=f1e61]: AI is the actor.Rules stay yours.
+  - generic [ref=f1e63]:
+    - generic [ref=f1e64]: Security for the agentic economy
+    - generic [ref=f1e65]: 0G Chain · Agentic ID · Compute · Storage
+    - generic [ref=f1e66]: Open, inspectable, revocable
