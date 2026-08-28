@@ -119,7 +119,6 @@ export default function App() {
       ),
     [],
   );
-  
   const loadChain = useCallback(
     async (wallet: string) => {
       if (!MANAGER_ADDRESS) {
